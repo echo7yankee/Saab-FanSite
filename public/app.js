@@ -1,4 +1,4 @@
-
+//Navbar links animation
 (function styleLink() {
     var btn = document.getElementsByClassName('navbar__link');
     
@@ -14,8 +14,7 @@
     }
 }());
 
-//navbar
-
+//Navbar Sticky animation
 (function sticky(){
     var navbar = document.querySelector('.navbar-container');
     var navbarTop = navbar.scrollTop;
@@ -36,10 +35,10 @@
     }
 }());
 
-
+//Signup Modal
 (function signupModal(){
     //Open Modal
-    var signUpBtn = document.getElementById('link-btn');
+    var signUpBtn = document.getElementById('signup-btn');
     var signUpModal = document.querySelector('.signup-container');
     var closeModal = document.querySelector('.close-btn');
     var overlay = document.querySelector('.overlay');
@@ -54,12 +53,34 @@
         overlay.classList.remove('open');
     });
 
-    overlay.addEventListener('click',function(){
+    overlay.addEventListener('click', function(){
         overlay.classList.remove('open');
         signUpModal.style.display = 'none';
     })
 
     //CloseModal
+}());
+
+//Login Modal
+(function loginModal(){
+    var loginBtn = document.getElementById('login-btn');
+    var loginModal = document.querySelector('.login-container');
+    var closeModal = document.querySelectorAll('.close-btn');
+    var overlay = document.querySelector('.overlay');
+    for(var i = 0; i < closeModal.length; i++) {
+        closeModal[i].addEventListener('click', function(){
+            loginModal.style.display = 'none';
+            overlay.classList.remove('open');
+        });
+    }
+    loginBtn.addEventListener('click', function(){
+        loginModal.style.display = 'flex';
+        overlay.classList.add('open');
+    })  
+    overlay.addEventListener('click', function(){
+        overlay.classList.remove('open');
+        loginModal.style.display = 'none';
+    })
 }());
 
 
