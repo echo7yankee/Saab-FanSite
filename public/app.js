@@ -1,3 +1,4 @@
+
 (function styleLink() {
     var btn = document.getElementsByClassName('navbar__link');
     
@@ -33,6 +34,32 @@
             logo.classList.remove('navbar__logo-animate');
         }
     }
+}());
+
+
+(function signupModal(){
+    //Open Modal
+    var signUpBtn = document.getElementById('link-btn');
+    var signUpModal = document.querySelector('.signup-container');
+    var closeModal = document.querySelector('.close-btn');
+    var overlay = document.querySelector('.overlay');
+
+    signUpBtn.addEventListener('click', function(){
+        signUpModal.style.display = 'flex';
+        overlay.classList.add('open');
+    });
+
+    closeModal.addEventListener('click', function(){
+        signUpModal.style.display = 'none';
+        overlay.classList.remove('open');
+    });
+
+    overlay.addEventListener('click',function(){
+        overlay.classList.remove('open');
+        signUpModal.style.display = 'none';
+    })
+
+    //CloseModal
 }());
 
 
