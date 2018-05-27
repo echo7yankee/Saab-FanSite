@@ -1,7 +1,7 @@
 //Navbar links animation
 (function styleLink() {
     var btn = document.getElementsByClassName('navbar__link');
-    
+
     for (var i = 0; i < btn.length; i++) {
         btn[i].addEventListener('mouseover', function () {
             var span = this.nextElementSibling;
@@ -15,7 +15,7 @@
 }());
 
 //Navbar Sticky animation
-(function sticky(){
+(function sticky() {
     var navbar = document.querySelector('.navbar-container');
     var navbarTop = navbar.scrollTop;
     var logo = document.querySelector('.navbar__container-logo');
@@ -36,24 +36,24 @@
 }());
 
 //Signup Modal
-(function signupModal(){
+(function signupModal() {
     //Open Modal
     var signUpBtn = document.getElementById('signup-btn');
     var signUpModal = document.querySelector('.signup-container');
     var closeModal = document.querySelector('.close-btn');
     var overlay = document.querySelector('.overlay');
 
-    signUpBtn.addEventListener('click', function(){
+    signUpBtn.addEventListener('click', function () {
         signUpModal.style.display = 'flex';
         overlay.classList.add('open');
     });
 
-    closeModal.addEventListener('click', function(){
+    closeModal.addEventListener('click', function () {
         signUpModal.style.display = 'none';
         overlay.classList.remove('open');
     });
 
-    overlay.addEventListener('click', function(){
+    overlay.addEventListener('click', function () {
         overlay.classList.remove('open');
         signUpModal.style.display = 'none';
     })
@@ -62,95 +62,79 @@
 }());
 
 //Login Modal
-(function loginModal(){
+(function loginModal() {
     var loginBtn = document.getElementById('login-btn');
     var loginModal = document.querySelector('.login-container');
     var closeModal = document.querySelectorAll('.close-btn');
     var overlay = document.querySelector('.overlay');
-    for(var i = 0; i < closeModal.length; i++) {
-        closeModal[i].addEventListener('click', function(){
+    for (var i = 0; i < closeModal.length; i++) {
+        closeModal[i].addEventListener('click', function () {
             loginModal.style.display = 'none';
             overlay.classList.remove('open');
         });
     }
-    loginBtn.addEventListener('click', function(){
+    loginBtn.addEventListener('click', function () {
         loginModal.style.display = 'flex';
         overlay.classList.add('open');
-    })  
-    overlay.addEventListener('click', function(){
+    })
+    overlay.addEventListener('click', function () {
         overlay.classList.remove('open');
         loginModal.style.display = 'none';
     })
 }());
 
 //Carousel
-(function carousel(){
+(function carousel() {
     var carousel = document.querySelector('.carousel');
     var inner = document.querySelector('.carousel__inner');
     var img = document.querySelectorAll('.carousel__img');
     var next = document.querySelector('.carousel__svg-2')
     var prev = document.querySelector('.carousel__svg-1')
+    var bulletsContainer = document.querySelector('.bullets-container');
     counter = 0;
-    width = 168;
+    width = 100;
+    bulletsArr = [];
 
-    for (var i = 0; i < img.length; i++);
+    for (var i = 0; i < img.length; i++) {
+        var bullets = document.createElement('span');
+        bullets.classList.add('bullets');
+        bulletsContainer.appendChild(bullets);
+        bulletsArr.push(bullets);
 
-    next.addEventListener('click', function(){
+
+    };
+
+    next.addEventListener('click', function () {
         counter++;
 
-        if(counter >= img.length) {
+        if (counter >= img.length) {
             counter = 0;
         }
         slideCarousel();
     });
-
-    prev.addEventListener('click', function(){
+    prev.addEventListener('click', function () {
         counter--;
 
-        if(counter < 0) {
+        if (counter < 0) {
             counter = img.length - 1;
         }
         slideCarousel();
     });
 
     function slideCarousel() {
-        inner.style.left = - width * counter + 'rem';
+        inner.style.left = -width * counter + '%';
+        bulletsArr.forEach(function (bullets, i) {
+        bullets.addEventListener('click', function () {
+                counter = i;
+                slideCarousel();
+        });
+            if (i === counter) {
+                bullets.classList.add('active');
+            } else {
+                bullets.classList.remove('active');
+            }
+        });
     }
 
+    slideCarousel();
 }());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

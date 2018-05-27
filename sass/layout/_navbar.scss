@@ -15,6 +15,7 @@
     position: fixed;
     top: 0;
     height: 6vh;
+    z-index: 5;
     border-bottom-right-radius: 0rem;
     border-bottom-left-radius: 0rem;
     border-bottom: .2rem solid $color-white-gray;

@@ -31,6 +31,7 @@ html {
   position: fixed;
   top: 0;
   height: 6vh;
+  z-index: 5;
   border-bottom-right-radius: 0rem;
   border-bottom-left-radius: 0rem;
   border-bottom: 0.2rem solid #f0f0f0;
@@ -271,15 +272,15 @@ html {
   cursor: pointer;
   transition: all .2s; }
 
-.close-btn:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1); }
-
 .line {
   background-color: transparent;
   width: 90%;
   height: .3rem;
-  position: relative; }
+  position: relative;
+  opacity: 0.5; }
+
+.line:hover {
+  opacity: 1; }
 
 .line::before {
   content: '';
@@ -336,16 +337,26 @@ html {
   padding: 3rem;
   position: relative; }
 
+.carousel-header {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  text-shadow: 0.5rem -0.3rem 1rem rgba(0, 0, 0, 0.3); }
+
 .carousel {
-  width: 168rem;
-  height: 90rem;
+  width: 80%;
+  height: 75vh;
   margin: 0rem auto;
   border: 1rem solid #0c0529;
+  border-radius: .4rem;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); }
   .carousel__inner {
-    width: 168rem;
-    height: 90rem;
+    width: 100%;
+    height: 100%;
     position: absolute;
     left: 0;
     display: flex;
@@ -379,3 +390,37 @@ html {
             transform: translateY(-50%); }
     .carousel__svg-2:hover {
       opacity: 1; }
+
+.bullets-container {
+  position: absolute;
+  width: 15%;
+  height: 5rem;
+  left: 50%;
+  bottom: -1rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around; }
+
+.bullets {
+  display: inline-block;
+  width: 4rem;
+  border-radius: .5rem;
+  background-color: #0c0529;
+  height: 1rem;
+  opacity: 0.45;
+  cursor: pointer;
+  transition: all .2s ease; }
+
+.bullets:hover {
+  opacity: 0.65; }
+
+.bullets.active {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
+
+.saab-about {
+  min-height: 100vh;
+  width: 100%; }
