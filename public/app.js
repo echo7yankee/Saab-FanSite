@@ -92,7 +92,7 @@
     var prev = document.getElementById('carousel__prev')
     var bulletsContainer = document.querySelector('.bullets-container');
     counter = 0;
-    width = 100;
+    width = 146;
     bulletsArr = [];
 
     for (var i = 0; i < img.length; i++) {
@@ -100,8 +100,6 @@
         bullets.classList.add('bullets');
         bulletsContainer.appendChild(bullets);
         bulletsArr.push(bullets);
-
-
     };
 
     next.addEventListener('click', function () {
@@ -122,7 +120,7 @@
     });
 
     function slideCarousel() {
-        inner.style.left = -width * counter + '%';
+        inner.style.left = -width * counter + 'rem';
         bulletsArr.forEach(function (bullets, i) {
         bullets.addEventListener('click', function () {
                 counter = i;
