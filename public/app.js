@@ -88,8 +88,8 @@
     var carousel = document.querySelector('.carousel');
     var inner = document.querySelector('.carousel__inner');
     var img = document.querySelectorAll('.carousel__img');
-    var next = document.querySelector('.carousel__svg-2')
-    var prev = document.querySelector('.carousel__svg-1')
+    var next = document.getElementById('carousel__next')
+    var prev = document.getElementById('carousel__prev')
     var bulletsContainer = document.querySelector('.bullets-container');
     counter = 0;
     width = 100;
