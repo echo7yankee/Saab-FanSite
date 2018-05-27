@@ -83,106 +83,74 @@
     })
 }());
 
+//Carousel
+(function carousel(){
+    var carousel = document.querySelector('.carousel');
+    var inner = document.querySelector('.carousel__inner');
+    var img = document.querySelectorAll('.carousel__img');
+    var next = document.querySelector('.carousel__svg-2')
+    var prev = document.querySelector('.carousel__svg-1')
+    counter = 0;
+    width = 168;
 
+    for (var i = 0; i < img.length; i++);
 
+    next.addEventListener('click', function(){
+        counter++;
 
+        if(counter >= img.length) {
+            counter = 0;
+        }
+        slideCarousel();
+    });
 
+    prev.addEventListener('click', function(){
+        counter--;
 
+        if(counter < 0) {
+            counter = img.length - 1;
+        }
+        slideCarousel();
+    });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var navbar = document.querySelector('.navbar-container');
-var navTop = navbar.offsetTop;
-console.log(navTop);
-
-console.log(window.scrollY);
-window.addEventListener('scroll',stickyNav);
-
-function stickyNav() {
-    if (window.scrollY > navTop) {
-        document.body.style.paddingTop = navbar.offsetHeight + 'px';
-        document.body.classList.add('sticky-nav')
-    } else if (window.scrollY < navTop){
-        document.body.style.paddingTop = 0;
-        document.body.classList.remove('sticky-nav');
-    }
-}*/
-
-//navbar dos 
-
-/*var navbar = document.querySelector('.navbar-container');
-var navTop = navbar.scrollTop;
-console.log(navTop);
-
-console.log(window.scrollY);
-window.addEventListener('scroll', function(){
-
-    if (window.scrollY > navTop) {
-        document.body.classList.add('sticky-nav');
-        document.body.style.paddingTop = navbar.offsetHeight + 'px';
-    } else {
-        document.body.classList.remove('sticky-nav');
-        document.body.style.paddingTop = 0;
+    function slideCarousel() {
+        inner.style.left = - width * counter + 'rem';
     }
 
-});
+}());
 
 
-//menu dos
-
-var menuDos = document.querySelector('.menu-burger');
-var lineUno = document.querySelector('.line-uno');
-var lineDos = document.querySelector('.line-dos');
-
-menuDos.addEventListener('click',function(){
-
-    lineUno.classList.toggle('line-dos');
-
-});
 
 
-function scroll(){
 
-    var testImg = document.querySelector('.img-container');
-    var yposition = window.pageYOffset;
 
-    if (yposition > 600) {
-        testImg.classList.add('active');
-    } else if (yposition < 599) {
-        testImg.classList.remove('active');
-    }
-   
-    console.log(yposition);
 
-}
 
-window.addEventListener('scroll', scroll); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
