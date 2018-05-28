@@ -13,6 +13,7 @@
         });
     }
 }());
+//I am in your code bitch
 
 //Navbar Sticky animation
 (function sticky() {
