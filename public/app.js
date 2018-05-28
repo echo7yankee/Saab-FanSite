@@ -134,6 +134,8 @@
         bullets.classList.add('bullets');
         bulletsContainer.appendChild(bullets);
         bulletsArr.push(bullets);
+
+
     };
 
     next.addEventListener('click', function () {
@@ -155,12 +157,13 @@
 
     function slideCarousel() {
         inner.style.left = -width * counter + 'rem';
-        bulletsArr.forEach(function (bullets, i) {
+        bulletsArr.forEach(function (bullets, index) {
+     
             bullets.addEventListener('click', function () {
-                counter = i;
+                counter = index;
                 slideCarousel();
             });
-            if (i === counter) {
+            if (index === counter) {
                 bullets.classList.add('active');
             } else {
                 bullets.classList.remove('active');
