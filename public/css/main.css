@@ -418,7 +418,8 @@ html {
   height: 80vh;
   width: 100%;
   display: flex;
-  align-items: flex-end; }
+  flex-direction: column;
+  justify-content: center; }
   .about__saab {
     width: 80%;
     height: 80%;
@@ -499,7 +500,8 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  align-items: center; }
+  align-items: center;
+  margin-top: -10rem; }
   .contact__form {
     width: 80%;
     margin: 0 auto;

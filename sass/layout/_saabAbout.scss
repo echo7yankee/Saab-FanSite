@@ -2,15 +2,16 @@
     height: 80vh;
     width: 100%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    
     &__saab {
         width: 80%;
         height: 80%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
+        align-items: center;     
         
     }
     &__accordion {
