@@ -65,8 +65,6 @@
         }
     })
 
-    console.log(window.scrollY);
-    console.log(accordionOneTop);
 }());
 
 //Signup Modal
@@ -184,4 +182,24 @@
         });
     };
 
+}());
+
+
+//prevent link default
+
+(function preventLinkDefault(){
+    var links = document.getElementsByTagName('a');
+    for(var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(e){
+            e.preventDefault();
+        });
+    };
+
+}());
+
+//dynamic date
+(function dynamicDate(){
+    var year = new Date().getFullYear();
+    var date = `${year}`;
+    document.getElementById('dynamicYear').innerHTML = date;
 }());

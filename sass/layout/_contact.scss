@@ -1,0 +1,91 @@
+.contact {
+    height: 80vh;
+    background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    &__form {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    &__form-group {
+        width: 50%;
+        min-height: 12%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        
+    }
+    &__label {
+        font-family: inherit;
+        font-size: 2rem;
+        color: #fff;
+    }
+    &__label-about {
+        font-family: inherit;
+        font-size: 2rem;
+        color: #fff;
+    }
+    &__input {
+        font-family: inherit;
+        font-size: 1.8rem;
+        height: 5rem;
+        width: 60%;
+        outline: none;
+        text-indent: .5rem;
+        border: none;
+        border-radius: .3rem;
+        background-color: rgba(255, 255, 255, .80);
+
+        &::placeholder {
+            font-size: 1.8rem;
+            color: #333;
+        }
+    }
+    &__input-about {
+        font-family: inherit;
+        font-size: 1.8rem;
+        height: 15rem;
+        width: 80%;
+        padding: .2rem 0 12rem 0;
+        outline: none;
+        text-indent: .5rem;
+        border: none;
+        border-radius: .3rem;
+        background-color: rgba(255, 255, 255, .80);
+
+        &::placeholder {
+            font-size: 1.8rem;
+            color: #333;
+        }
+    }
+    &__btn {
+        margin-top: 5rem;
+        padding: 1rem 2rem;
+        border: none;
+        outline: none;
+        border-radius: .3rem;
+        color: #333;
+        font-size: 1.8rem;
+        font-family: inherit;
+        background-color: rgba($color-white-gray, .70);
+        transition: all .1s linear;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba($color-white-gray, 1);
+        }
+    }
+
+    &__footer {
+        color: #fff;
+    }
+   
+}
