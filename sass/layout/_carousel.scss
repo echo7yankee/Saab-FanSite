@@ -15,7 +15,7 @@
 
 .carousel {
     width: 80%;
-    min-height: 85vh;
+    min-height: 81vh;
     margin: 0rem auto;
     border: 1rem solid $color-test-light;
     border-radius: .4rem;
@@ -29,17 +29,17 @@
         transition: all .3s linear;
     }
     &__img {
-        width: 146rem;
+        width: 163rem;
         height: 90rem;
     }
 }
 
 .fa-angle-right {
     cursor: pointer;
-    font-size: 8rem;
+    font-size: 10rem;
     position: absolute;
     top: 50%;
-    right: 15rem;
+    right: 12rem;
     color: $color-test-light;
     opacity: .6;
     &:hover {
@@ -49,10 +49,10 @@
 
 .fa-angle-left {
     cursor: pointer;
-    font-size: 8rem;
+    font-size: 10rem;
     position: absolute;
     top: 50%;
-    left: 15rem;
+    left: 12rem;
     color: $color-test-light;
     opacity: .6;
     &:hover {

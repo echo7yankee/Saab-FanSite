@@ -35,6 +35,40 @@
     }
 }());
 
+//accordion scroll animation
+
+(function accordionScroll(){
+    var accordionOne = document.querySelector('.accordion-one');
+    var accordionOneTop = accordionOne.offsetTop;
+    var accordionTwo = document.querySelector('.accordion-two');
+    var accordionTwoTop = accordionTwo.offsetTop;
+    var accordionThree = document.querySelector('.accordion-three');
+    var accordionThreeTop = accordionThree.offsetTop;
+
+    window.addEventListener('scroll', function(){
+        if (window.scrollY > accordionOneTop / 1.5) {
+            accordionOne.classList.add('active-one');
+        } else {
+            accordionOne.classList.remove('active-one');
+        }
+
+        if (window.scrollY >= accordionTwoTop / 1.45) {
+            accordionTwo.classList.add('active-two');
+        } else {
+            accordionTwo.classList.remove('active-two');
+        }
+
+        if (window.scrollY >= accordionThreeTop / 1.35) {
+            accordionThree.classList.add('active-three');
+        } else {
+            accordionThree.classList.remove('active-three');
+        }
+    })
+
+    console.log(window.scrollY);
+    console.log(accordionOneTop);
+}());
+
 //Signup Modal
 (function signupModal() {
     //Open Modal
@@ -43,9 +77,10 @@
     var closeModal = document.querySelector('.close-btn');
     var overlay = document.querySelector('.overlay');
 
-    signUpBtn.addEventListener('click', function () {
+    signUpBtn.addEventListener('click', function (e) {
         signUpModal.style.display = 'flex';
         overlay.classList.add('open');
+        e.preventDefault();
     });
 
     closeModal.addEventListener('click', function () {
@@ -73,9 +108,10 @@
             overlay.classList.remove('open');
         });
     }
-    loginBtn.addEventListener('click', function () {
+    loginBtn.addEventListener('click', function (e) {
         loginModal.style.display = 'flex';
         overlay.classList.add('open');
+        e.preventDefault();
     })
     overlay.addEventListener('click', function () {
         overlay.classList.remove('open');
@@ -92,7 +128,7 @@
     var prev = document.getElementById('carousel__prev')
     var bulletsContainer = document.querySelector('.bullets-container');
     counter = 0;
-    width = 146;
+    width = 163;
     bulletsArr = [];
 
     for (var i = 0; i < img.length; i++) {
@@ -122,10 +158,10 @@
     function slideCarousel() {
         inner.style.left = -width * counter + 'rem';
         bulletsArr.forEach(function (bullets, i) {
-        bullets.addEventListener('click', function () {
+            bullets.addEventListener('click', function () {
                 counter = i;
                 slideCarousel();
-        });
+            });
             if (i === counter) {
                 bullets.classList.add('active');
             } else {
@@ -135,4 +171,17 @@
     }
 
     slideCarousel();
+}());
+
+//accordion
+(function accordion() {
+    var accordionBtn = document.querySelectorAll('.about__accordion');
+
+    for (var i = 0; i < accordionBtn.length; i++) {
+        accordionBtn[i].addEventListener('click', function () {
+            var content = this.nextElementSibling;
+            content.classList.toggle('active');
+        });
+    };
+
 }());

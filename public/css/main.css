@@ -346,7 +346,7 @@ html {
 
 .carousel {
   width: 80%;
-  min-height: 85vh;
+  min-height: 81vh;
   margin: 0rem auto;
   border: 1rem solid #0c0529;
   border-radius: .4rem;
@@ -359,15 +359,15 @@ html {
     display: flex;
     transition: all .3s linear; }
   .carousel__img {
-    width: 146rem;
+    width: 163rem;
     height: 90rem; }
 
 .fa-angle-right {
   cursor: pointer;
-  font-size: 8rem;
+  font-size: 10rem;
   position: absolute;
   top: 50%;
-  right: 15rem;
+  right: 12rem;
   color: #0c0529;
   opacity: .6; }
   .fa-angle-right:hover {
@@ -375,10 +375,10 @@ html {
 
 .fa-angle-left {
   cursor: pointer;
-  font-size: 8rem;
+  font-size: 10rem;
   position: absolute;
   top: 50%;
-  left: 15rem;
+  left: 12rem;
   color: #0c0529;
   opacity: .6; }
   .fa-angle-left:hover {
@@ -414,6 +414,81 @@ html {
   -webkit-transform: scale(1.2);
           transform: scale(1.2); }
 
-.saab-about {
-  min-height: 100vh;
-  width: 100%; }
+.about {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end; }
+  .about__saab {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .about__accordion {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: .3rem;
+    opacity: 0.8;
+    transition: opacity .2s linear; }
+  .about__accordion:hover {
+    opacity: 1; }
+  .about__content {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+    max-height: 0rem;
+    overflow: hidden;
+    transition: all .3s ease-in-out; }
+  .about__content.active {
+    max-height: 12rem; }
+  .about__paragraph {
+    font-size: 1.8rem;
+    width: 90%;
+    color: #999; }
+  .about__icon {
+    height: 6rem;
+    width: 6rem; }
+
+.accordion-one {
+  -webkit-transform: translateY(40rem);
+          transform: translateY(40rem);
+  opacity: 0;
+  transition: all .6s ease-in; }
+
+.accordion-one.active-one {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 1; }
+
+.accordion-two {
+  -webkit-transform: translateY(40rem);
+          transform: translateY(40rem);
+  opacity: 0;
+  transition: all .6s ease-in; }
+
+.accordion-two.active-two {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 1; }
+
+.accordion-three {
+  -webkit-transform: translateY(40rem);
+          transform: translateY(40rem);
+  opacity: 0;
+  transition: all .6s ease-in; }
+
+.accordion-three.active-three {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  opacity: 1; }
