@@ -25,6 +25,7 @@
         border-radius: .5rem;
         opacity: 0.8;
         transition: opacity .2s linear;
+        box-shadow: 0 1rem 2rem rgba($color-black,.50);
     }
     &__accordion:hover {
         opacity: 1;
@@ -40,6 +41,7 @@
         max-height: 0rem;
         overflow: hidden;
         transition: all .3s ease-in-out;
+        box-shadow: 0 1rem 2rem rgba($color-black,.30);
     }
     &__content.active {
         max-height: 12rem;

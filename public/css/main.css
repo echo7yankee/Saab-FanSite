@@ -36,7 +36,8 @@ html {
   border-bottom-left-radius: 0rem;
   border-bottom: 0.2rem solid #f0f0f0;
   border-left: 0;
-  border-right: 0; }
+  border-right: 0;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.25); }
 
 .navbar__container-logo.navbar__logo-animate {
   max-width: 50rem;
@@ -230,11 +231,11 @@ html {
     border-bottom: .3rem solid transparent;
     box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
     .form__input:focus {
-      border-bottom: 3px solid #55c57a;
+      border-bottom: 1.5px solid #55c57a;
       box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.15);
       outline: none; }
     .form__input:invalid {
-      border-bottom: 3px solid orangered;
+      border-bottom: 1.5px solid orangered;
       box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.15); }
   .form__input::-webkit-input-placeholder {
     color: #777;
@@ -404,15 +405,18 @@ html {
   height: 1rem;
   opacity: 0.45;
   cursor: pointer;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
 
 .bullets:hover {
-  opacity: 0.65; }
+  opacity: 0.65;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.35); }
 
 .bullets.active {
   opacity: 1;
   -webkit-transform: scale(1.2);
-          transform: scale(1.2); }
+          transform: scale(1.2);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4); }
 
 .about {
   height: 80vh;
@@ -437,7 +441,8 @@ html {
     cursor: pointer;
     border-radius: .5rem;
     opacity: 0.8;
-    transition: opacity .2s linear; }
+    transition: opacity .2s linear;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
   .about__accordion:hover {
     opacity: 1; }
   .about__content {
@@ -450,7 +455,8 @@ html {
     margin: 1rem;
     max-height: 0rem;
     overflow: hidden;
-    transition: all .3s ease-in-out; }
+    transition: all .3s ease-in-out;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
   .about__content.active {
     max-height: 12rem; }
   .about__paragraph {
@@ -498,10 +504,8 @@ html {
   height: 80vh;
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
   width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  margin-top: -10rem; }
+  margin-top: -10rem;
+  position: relative; }
   .contact__form {
     width: 80%;
     margin: 0 auto;
@@ -533,7 +537,8 @@ html {
     text-indent: .5rem;
     border: none;
     border-radius: .3rem;
-    background-color: rgba(255, 255, 255, 0.8); }
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
     .contact__input::-webkit-input-placeholder {
       font-size: 1.8rem;
       color: #333; }
@@ -546,6 +551,13 @@ html {
     .contact__input::placeholder {
       font-size: 1.8rem;
       color: #333; }
+    .contact__input:focus {
+      border-bottom: 1.5px solid #55c57a;
+      box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.15);
+      outline: none; }
+    .contact__input:invalid {
+      border-bottom: 1.5px solid orangered;
+      box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.15); }
   .contact__input-about {
     font-family: inherit;
     font-size: 1.8rem;
@@ -556,7 +568,8 @@ html {
     text-indent: .5rem;
     border: none;
     border-radius: .3rem;
-    background-color: rgba(255, 255, 255, 0.8); }
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
     .contact__input-about::-webkit-input-placeholder {
       font-size: 1.8rem;
       color: #333; }
@@ -569,6 +582,13 @@ html {
     .contact__input-about::placeholder {
       font-size: 1.8rem;
       color: #333; }
+    .contact__input-about:focus {
+      border-bottom: 1.5px solid #55c57a;
+      box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.15);
+      outline: none; }
+    .contact__input-about:invalid {
+      border-bottom: 1.5px solid orangered;
+      box-shadow: 0 0.8rem 1.5rem rgba(255, 255, 255, 0.15); }
   .contact__btn {
     margin-top: 5rem;
     padding: 1rem 2rem;
@@ -582,6 +602,19 @@ html {
     transition: all .1s linear;
     cursor: pointer; }
     .contact__btn:hover {
-      background-color: #f0f0f0; }
+      background-color: #f0f0f0;
+      box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.25); }
   .contact__footer {
-    color: #fff; }
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .contact__header {
+    color: #fff;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }

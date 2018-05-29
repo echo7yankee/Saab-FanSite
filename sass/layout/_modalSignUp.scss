@@ -47,12 +47,12 @@
         border-bottom: .3rem solid transparent;
         box-shadow: 0 1rem 1.5rem rgba($color-black, .30);
         &:focus {
-            border-bottom: 3px solid $color-green-dark;
+            border-bottom: 1.5px solid $color-green-dark;
             box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
             outline: none;
         }
         &:invalid {
-            border-bottom: 3px solid orangered;
+            border-bottom: 1.5px solid orangered;
             box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
         }
     }

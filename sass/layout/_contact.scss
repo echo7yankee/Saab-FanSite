@@ -2,10 +2,8 @@
     height: 80vh;
     background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
     width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
     margin-top: -10rem;
+    position: relative;
     &__form {
         width: 80%;
         margin: 0 auto;
@@ -44,10 +42,21 @@
         border: none;
         border-radius: .3rem;
         background-color: rgba(255, 255, 255, .80);
+        box-shadow: 0 1rem 2rem rgba($color-black,.30);
 
         &::placeholder {
             font-size: 1.8rem;
             color: #333;
+        }
+
+        &:focus {
+            border-bottom: 1.5px solid $color-green-dark;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
+            outline: none;
+        }
+        &:invalid {
+            border-bottom: 1.5px solid orangered;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
         }
     }
     &__input-about {
@@ -61,10 +70,21 @@
         border: none;
         border-radius: .3rem;
         background-color: rgba(255, 255, 255, .80);
+        box-shadow: 0 1rem 2rem rgba($color-black,.30);
 
         &::placeholder {
             font-size: 1.8rem;
             color: #333;
+        }
+
+        &:focus {
+            border-bottom: 1.5px solid $color-green-dark;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
+            outline: none;
+        }
+        &:invalid {
+            border-bottom: 1.5px solid orangered;
+            box-shadow: 0 0.8rem 1.5rem rgba($color-white, .15);
         }
     }
     &__btn {
@@ -82,11 +102,24 @@
 
         &:hover {
             background-color: rgba($color-white-gray, 1);
+            box-shadow: 0 0.3rem 1rem rgba($color-black,.25);
         }
     }
 
     &__footer {
         color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__header {
+        color: #fff;
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
    
 }

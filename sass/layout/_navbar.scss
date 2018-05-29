@@ -8,6 +8,7 @@
     border-bottom: .2rem solid $color-white-gray;
     border-left: .2rem solid $color-white-gray;
     border-right: .2rem solid $color-white-gray;
+    
   
 }
 
@@ -21,6 +22,7 @@
     border-bottom: .2rem solid $color-white-gray;
     border-left: 0;
     border-right: 0;
+    box-shadow: 0 1rem 2.5rem rgba($color-black,.25);
 }
 
 .navbar__container-logo.navbar__logo-animate {
