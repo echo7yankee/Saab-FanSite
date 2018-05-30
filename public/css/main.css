@@ -395,6 +395,8 @@ html {
     font-size: 8rem; } }
 
 @media only screen and (max-width: 768px) {
+  .carousel-container {
+    min-height: 65vh; }
   .carousel-header {
     font-size: 2rem; }
   .carousel {
@@ -543,10 +545,6 @@ html {
     height: 5rem;
     width: 5rem; } }
 
-@media only screen and (max-width: 768px) {
-  .about {
-    min-height: 60vh; } }
-
 @media only screen and (max-width: 600px) {
   .about__saab {
     width: 95%; }
@@ -561,7 +559,11 @@ html {
 
 @media only screen and (max-width: 450px) {
   .about {
-    min-height: 100vh; }
+    min-height: 100vh;
+    justify-content: flex-start; }
+    .about__saab {
+      height: 100%;
+      justify-content: flex-start; }
     .about__accordion {
       height: 5rem;
       font-size: 1.3rem; }
@@ -702,26 +704,28 @@ html {
     width: 85%; } }
 
 @media only screen and (max-width: 768px) {
-  .contact__form {
-    width: 95%; }
-  .contact__input {
-    width: 80%;
-    height: 6rem;
-    font-size: 1.6rem; }
-  .contact__label {
-    font-size: 1.6rem; }
-  .contact__input-about {
-    width: 90%;
-    height: 4rem;
-    font-size: 1.6rem;
-    padding: 1.5rem 0 10rem; }
-  .contact__form-group {
-    width: 100%; }
-  .contact__footer {
-    text-align: center; }
-  .contact__btn {
-    padding: 1rem 2rem;
-    margin-top: 1rem; } }
+  .contact {
+    min-height: 100vh; }
+    .contact__form {
+      width: 95%; }
+    .contact__input {
+      width: 80%;
+      height: 6rem;
+      font-size: 1.6rem; }
+    .contact__label {
+      font-size: 1.6rem; }
+    .contact__input-about {
+      width: 90%;
+      height: 4rem;
+      font-size: 1.6rem;
+      padding: 1.5rem 0 10rem; }
+    .contact__form-group {
+      width: 100%; }
+    .contact__footer {
+      text-align: center; }
+    .contact__btn {
+      padding: 1rem 2rem;
+      margin-top: 1rem; } }
 
 .navbar-container {
   height: 8vh;
