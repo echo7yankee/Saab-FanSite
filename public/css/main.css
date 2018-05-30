@@ -574,11 +574,12 @@ html {
       width: 3rem; } }
 
 .contact {
-  height: 80vh;
+  height: 90vh;
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
-  width: 100%;
-  margin-top: -10rem;
-  position: relative; }
+  width: 100%; }
+  .contact__header {
+    margin-bottom: 2rem;
+    color: #fff; }
   .contact__form {
     width: 80%;
     margin: 0 auto;
@@ -673,24 +674,17 @@ html {
     font-family: inherit;
     background-color: rgba(240, 240, 240, 0.7);
     transition: all .1s linear;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 10rem; }
     .contact__btn:hover {
       background-color: #f0f0f0;
       box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.25); }
   .contact__footer {
+    text-align: center;
     color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
-  .contact__header {
-    color: #fff;
-    position: absolute;
-    top: 3rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    display: flex;
+    margin-top: 5rem;
+    width: 95%; }
 
 @media only screen and (max-width: 1430px) {
   .contact__form-group {
