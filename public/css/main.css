@@ -416,11 +416,11 @@ html {
   .carousel {
     min-height: 42vh; } }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 361px) {
   .carousel-header {
     font-size: 1.6rem; }
   .carousel {
-    min-height: 30.5vh; }
+    min-height: 38vh; }
   .fa-angle-left {
     font-size: 4rem;
     left: 1rem; }
@@ -432,6 +432,14 @@ html {
   .bullets {
     width: 2rem;
     margin: 0 .5rem; } }
+
+@media only screen and (max-width: 414px) {
+  .carousel {
+    min-height: 37vh; } }
+
+@media only screen and (max-width: 412px) {
+  .carousel {
+    min-height: 30vh; } }
 
 .about {
   height: 100vh;
@@ -533,7 +541,7 @@ html {
 
 @media only screen and (max-width: 768px) {
   .about {
-    height: 60rem; } }
+    min-height: 60vh; } }
 
 @media only screen and (max-width: 600px) {
   .about__saab {
@@ -549,7 +557,7 @@ html {
 
 @media only screen and (max-width: 450px) {
   .about__accordion {
-    height: 3.2rem;
+    height: 3rem;
     font-size: 1.3rem; }
   .about__paragraph {
     font-size: 1.2rem; }
@@ -681,6 +689,9 @@ html {
     width: 70%; } }
 
 @media only screen and (max-width: 935px) {
+  .contact__header {
+    font-size: 2.2rem;
+    top: 1.5rem; }
   .contact__form-group {
     width: 85%; } }
 
@@ -688,14 +699,23 @@ html {
   .contact__form {
     width: 95%; }
   .contact__input {
-    width: 80%; }
+    width: 80%;
+    height: 6rem;
+    font-size: 1.6rem; }
+  .contact__label {
+    font-size: 1.6rem; }
   .contact__input-about {
-    width: 90%; }
+    width: 90%;
+    height: 4rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 0 10rem; }
   .contact__form-group {
     width: 100%; }
   .contact__footer {
-    font-size: 2rem;
-    text-align: center; } }
+    text-align: center; }
+  .contact__btn {
+    padding: 1rem 2rem;
+    margin-top: 1rem; } }
 
 .navbar-container {
   height: 8vh;
@@ -813,7 +833,8 @@ html {
     align-items: center;
     justify-content: center;
     border-radius: 1000rem;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none; }
     .menu__one {
       width: 35%;
       background-color: #fff;
@@ -946,7 +967,7 @@ html {
 
 @media only screen and (max-width: 870px) {
   .jumbotron__content {
-    width: 100%; }
+    width: 95%; }
   .jumbotron__header-secondary {
     letter-spacing: 0.5rem;
     font-size: 4.5rem; }
@@ -962,7 +983,7 @@ html {
     font-size: 4.2rem;
     text-align: center; }
   .jumbotron__content {
-    min-height: 35%; }
+    min-height: 30%; }
   .jumbotron__paragraph {
     letter-spacing: 0.3rem;
     font-size: 2.2rem;

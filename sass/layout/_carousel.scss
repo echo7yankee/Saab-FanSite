@@ -193,14 +193,14 @@
     }
 }
 
-@media only screen and (max-width: 470px) { 
+@media only screen and (max-width: 361px) { 
 
     .carousel-header {
         font-size: 1.6rem;
     }
 
     .carousel {
-        min-height: 30.5vh;
+        min-height: 38vh;
     }
 
     .fa-angle-left {
@@ -220,6 +220,18 @@
     .bullets {
         width: 2rem;
         margin: 0 .5rem;
+    }
+}
+
+@media only screen and (max-width: 414px) { 
+    .carousel {
+        min-height: 37vh;
+    }
+}
+
+@media only screen and (max-width: 412px) { 
+    .carousel {
+        min-height: 30vh;
     }
 }
 

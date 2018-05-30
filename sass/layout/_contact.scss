@@ -142,6 +142,11 @@
 
     .contact {
 
+        &__header {
+            font-size: 2.2rem;
+            top: 1.5rem;
+        }
+
         &__form {
 
         }
@@ -157,15 +162,25 @@
     .contact {
 
         &__form {
-            width: 95%
+            width: 95%;
+     
         }
 
         &__input {
             width: 80%;
+            height: 6rem;
+            font-size: 1.6rem;
+        }
+
+        &__label {
+            font-size: 1.6rem;
         }
 
         &__input-about {
             width: 90%;
+            height: 4rem;
+            font-size: 1.6rem;
+            padding: 1.5rem 0 10rem;
         }
 
         &__form-group {
@@ -173,8 +188,12 @@
         }
 
         &__footer {
-            font-size: 2rem;
             text-align: center;
+        }
+
+        &__btn {
+            padding: 1rem 2rem;
+            margin-top: 1rem;
         }
     }
 }
