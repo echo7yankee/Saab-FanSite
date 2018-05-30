@@ -146,9 +146,10 @@
 
 @media only screen and (max-width: 450px) {
     .about {
+        min-height: 100vh;
 
         &__accordion {
-            height: 3rem;
+            height: 5rem;
             font-size: 1.3rem
         }
 

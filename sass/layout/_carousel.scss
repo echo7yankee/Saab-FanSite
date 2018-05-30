@@ -193,6 +193,25 @@
     }
 }
 
+
+@media only screen and (max-width: 414px) { 
+    .carousel {
+        min-height: 37vh;
+    }
+}
+
+@media only screen and (max-width: 412px) { 
+    .carousel {
+        min-height: 33.5vh;
+    }
+}
+
+@media only screen and (max-width: 375px) { 
+    .carousel {
+        min-height: 30.5vh;
+    }
+}
+
 @media only screen and (max-width: 361px) { 
 
     .carousel-header {
@@ -200,7 +219,7 @@
     }
 
     .carousel {
-        min-height: 38vh;
+        min-height: 36vh;
     }
 
     .fa-angle-left {
@@ -220,18 +239,6 @@
     .bullets {
         width: 2rem;
         margin: 0 .5rem;
-    }
-}
-
-@media only screen and (max-width: 414px) { 
-    .carousel {
-        min-height: 37vh;
-    }
-}
-
-@media only screen and (max-width: 412px) { 
-    .carousel {
-        min-height: 30vh;
     }
 }
 

@@ -53,19 +53,19 @@
         if (window.scrollY > accordionOneTop / 1.53) {
             accordionOne.classList.add('active-one');
         } else {
-            accordionOne.classList.remove('active-one');
+            //accordionOne.classList.remove('active-one');
         }
 
         if (window.scrollY >= accordionTwoTop / 1.48) {
             accordionTwo.classList.add('active-two');
         } else {
-            accordionTwo.classList.remove('active-two');
+            //accordionTwo.classList.remove('active-two');
         }
 
         if (window.scrollY >= accordionThreeTop / 1.43) {
             accordionThree.classList.add('active-three');
         } else {
-            accordionThree.classList.remove('active-three');
+            //accordionThree.classList.remove('active-three');
         } 
     })
 
