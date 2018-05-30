@@ -26,7 +26,7 @@
     function stickyNav() {
         if (window.scrollY > navbarTop) {
             navbar.classList.add('animate-navbar');
-            document.body.style.paddingTop = navbar.offsetHeight + 'px';
+            document.body.style.paddingTop = 0;
             logo.classList.add('navbar__logo-animate');
         } else {
             navbar.classList.remove('animate-navbar');
@@ -47,23 +47,26 @@
     var accordionThreeTop = accordionThree.offsetTop;
 
     window.addEventListener('scroll', function(){
-        if (window.scrollY > accordionOneTop / 1.5) {
+        console.log(window.scrollY);
+        console.log(accordionOneTop);
+
+        if (window.scrollY > accordionOneTop / 1.53) {
             accordionOne.classList.add('active-one');
         } else {
             accordionOne.classList.remove('active-one');
         }
 
-        if (window.scrollY >= accordionTwoTop / 1.45) {
+        if (window.scrollY >= accordionTwoTop / 1.48) {
             accordionTwo.classList.add('active-two');
         } else {
             accordionTwo.classList.remove('active-two');
         }
 
-        if (window.scrollY >= accordionThreeTop / 1.35) {
+        if (window.scrollY >= accordionThreeTop / 1.43) {
             accordionThree.classList.add('active-three');
         } else {
             accordionThree.classList.remove('active-three');
-        }
+        } 
     })
 
 }());
@@ -127,7 +130,7 @@
     var prev = document.getElementById('carousel__prev')
     var bulletsContainer = document.querySelector('.bullets-container');
     counter = 0;
-    width = 163;
+    width = 100;
     bulletsArr = [];
 
     for (var i = 0; i < img.length; i++) {
@@ -157,7 +160,7 @@
     });
 
     function slideCarousel() {
-        inner.style.left = -width * counter + 'rem';
+        inner.style.left = -width * counter + '%';
         bulletsArr.forEach(function (bullets, index) {
      
             bullets.addEventListener('click', function () {
@@ -206,4 +209,20 @@
     var year = new Date().getFullYear();
     var date = `${year}`;
     document.getElementById('dynamicYear').innerHTML = date;
+}());
+
+
+//menu
+
+(function menu(){
+    var menuBtn = document.querySelector('.menu');
+    var menuOne = document.querySelector('.menu__one');
+    var menuNavbar = document.querySelector('.navbar-container');
+   
+    
+    menuBtn.addEventListener('click', function(){
+        menuOne.classList.toggle('menu__two');    
+        menuNavbar.classList.toggle('navbar-transform');
+    });
+
 }());

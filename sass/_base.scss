@@ -19,4 +19,24 @@ body {
 html {
     
     font-size: 62.5%;
+
+  
+}
+
+@media only screen and (max-width: 1400px) {
+    html {
+        font-size: 57%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 53%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 51%;
+    }
 }

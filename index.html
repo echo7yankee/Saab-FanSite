@@ -15,32 +15,10 @@
 <body>
 
     <main class="main">
-
-        <nav class="navbar-container">
-            <div class="navbar">
-                <div class="navbar__container-logo">
-                    <img src="./public/img/logo.png" alt="" class="navbar__logo">
-                </div>
-                <ul class="navbar__list">
-                    <li class="navbar__item">
-                        <a href="#" class="navbar__link">Home</a>
-                        <span class="navbar__span"></span>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#" class="navbar__link">See brief history</a>
-                        <span class="navbar__span"></span>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#" id="signup-btn" class="navbar__link">Sign Up</a>
-                        <span class="navbar__span"></span>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="#" id="login-btn" class="navbar__link">Log In</a>
-                        <span class="navbar__span"></span>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="menu">
+            <div class="menu__one"></div>
+            <!--<div class="menu__two"></div>-->
+        </div>
 
         <!--Signup Modal-->
         <div class="signup-container">
@@ -86,6 +64,33 @@
         <!--Signup Modal-->
 
         <div class="jumbotron">
+
+            <nav class="navbar-container">
+                <div class="navbar">
+                    <div class="navbar__container-logo">
+                        <img src="./public/img/logo.jpg" alt="" class="navbar__logo">
+                    </div>
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__link">Home</a>
+                            <span class="navbar__span"></span>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" class="navbar__link">See brief history</a>
+                            <span class="navbar__span"></span>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" id="signup-btn" class="navbar__link">Sign Up</a>
+                            <span class="navbar__span"></span>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#" id="login-btn" class="navbar__link">Log In</a>
+                            <span class="navbar__span"></span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
             <div class="jumbotron__content">
                 <h2 class="jumbotron__header-secondary">Welcome to Saab</h2>
                 <p class="jumbotron__paragraph">The perfect place for the perfect car</p>
@@ -104,16 +109,16 @@
                     <img src="public/img/saab-5.jpg" alt="" class="carousel__img">
                     <img src="public/img/saab-6.jpg" alt="" class="carousel__img">
                 </div>
+                <i id="carousel__next" class="fas fa-angle-right"></i>
+                <i id="carousel__prev" class="fas fa-angle-left"></i>
+                <div class="bullets-container">
+                    <!--<span class="bullets"></span>-->
+                </div>
             </div>
-            <i id="carousel__next" class="fas fa-angle-right"></i>
-            <i id="carousel__prev" class="fas fa-angle-left"></i>
-            <div class="bullets-container">
-                <!--<span class="bullets"></span>-->
-            </div>
+
         </div>
 
         <div class="about">
-         
             <div class="about__saab">
 
                 <button class="about__accordion accordion-one">Read something about Saab Engine V8</button>
@@ -121,11 +126,7 @@
                     <img src="public/img/engine.svg" alt="" class="about__icon">
                     <p class="about__paragraph">The Saab V8 was a V8 engine developed for Saab Automobile by Valmet in Linnavuori factory, Finland (now
                         AGCO Sisu Power). Only five prototypes were made. General Motors became a partner in Saab Automobile
-                        and instead wanted Saab to use their new V6, which resulted in the scrapping of the project.[when?]
-                        The engine had four camshafts and 32 valves and, in the non-turbocharged form, it produced 250 to
-                        300 hp depending on the version. Maximum torque was around 300–320 Nm. The block was cast by Valmet
-                        Rautpohja plant in Jyväskylä. Crankshafts came from England and cylinder heads came from the Saab
-                        B202 engine. Another head had intake and exhaust ports reversed.</p>
+                        and instead wanted Saab to use their new V6, which resulted in the scrapping of the project.</p>
                 </div>
                 <button class="about__accordion accordion-two">Saabs known for their turbo</button>
                 <div class="about__content ">
@@ -133,10 +134,7 @@
                     <p class="about__paragraph">With 180bhp and 295lb ft, you’d be right. But it’s the power delivery that makes it stand out. Saab has
                         integrated a two-stage turbo (one unit containing a small and a large turbine) for a broad, linear
                         spread of shove and crisp, near-instantaneous throttle response. Capable of 47.9mpg, it still sounds
-                        a bit gravelly but revs smoothly and suits the 9-3’s laid-back nature. The 2.0t Biopower will be
-                        a 250-per-year sideshow in the UK until the Government changes its tax policy on bio-ethanol. Unlike
-                        Sweden, where the company is set to phase out regular unleaded cars. Pity, as the tri-power range
-                        is a torquey, green way of turning a 175bhp engine into a 200bhp one when using E85. </p>
+                        a bit gravelly but revs smoothly and suits the 9-3’s laid-back nature.  </p>
                 </div>
                 <button class="about__accordion accordion-three">Nevs buying Saab and making their new cars electric</button>
                 <div class="about__content">
@@ -145,8 +143,7 @@
                         2015 the company signed a strategic collaboration agreement with the Chinese company Panda New Energy
                         Co, an energy vehicle leasing company that focuses on limiting emissions. According to the agreement,
                         NEVS will provide Panda with 150,000 9-3 sedan electric vehicles until the end of 2020. NEVS signed
-                        a battery contract with Amperex in 2017. In 2017, Chinese rental car company Didi Chuxing announced
-                        a 4 billion SEK investment in NEVS</p>
+                        a battery contract with Amperex in 2017.</p>
                 </div>
 
             </div>
@@ -154,7 +151,9 @@
 
         <div class="contact">
             <h2 class="contact__header">Contact Us</h2>
-            <p class="contact__footer">&copy; Created by echo7yankee. All rights reserved <span id="dynamicYear" ></span></p>
+            <p class="contact__footer">&copy; Created by echo7yankee. All rights reserved
+                <span id="dynamicYear"></span>
+            </p>
             <form action="#" class="contact__form">
                 <div class="contact__form-group">
                     <label for="" class="contact__label">Name:</label>
@@ -173,7 +172,7 @@
                     <input type="text" class="contact__input-about" placeholder="Message" required>
                 </div>
                 <button class="contact__btn" type="submit">Submit</button>
-            </form>  
+            </form>
         </div>
 
     </main>
