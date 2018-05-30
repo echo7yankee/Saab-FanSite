@@ -116,6 +116,11 @@
         }
     }
 }
+@media only screen and (max-width: 768px) {
+    .about {
+        height: 60rem;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .about {

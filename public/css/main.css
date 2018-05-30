@@ -410,11 +410,11 @@ html {
 
 @media only screen and (max-width: 660px) {
   .carousel {
-    min-height: 45vh; } }
+    min-height: 50vh; } }
 
 @media only screen and (max-width: 545px) {
   .carousel {
-    min-height: 38vh; } }
+    min-height: 42vh; } }
 
 @media only screen and (max-width: 470px) {
   .carousel-header {
@@ -530,6 +530,10 @@ html {
   .about__icon {
     height: 5rem;
     width: 5rem; } }
+
+@media only screen and (max-width: 768px) {
+  .about {
+    height: 60rem; } }
 
 @media only screen and (max-width: 600px) {
   .about__saab {
@@ -671,6 +675,27 @@ html {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+
+@media only screen and (max-width: 1430px) {
+  .contact__form-group {
+    width: 70%; } }
+
+@media only screen and (max-width: 935px) {
+  .contact__form-group {
+    width: 85%; } }
+
+@media only screen and (max-width: 768px) {
+  .contact__form {
+    width: 95%; }
+  .contact__input {
+    width: 80%; }
+  .contact__input-about {
+    width: 90%; }
+  .contact__form-group {
+    width: 100%; }
+  .contact__footer {
+    font-size: 2rem;
+    text-align: center; } }
 
 .navbar-container {
   height: 8vh;
