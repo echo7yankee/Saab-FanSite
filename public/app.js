@@ -78,6 +78,7 @@
     var signUpModal = document.querySelector('.signup-container');
     var closeModal = document.querySelector('.close-btn');
     var overlay = document.querySelector('.overlay');
+    var loginModal = document.querySelector('.login-container');
 
     signUpBtn.addEventListener('click', function (e) {
         signUpModal.style.display = 'flex';
@@ -88,6 +89,7 @@
     closeModal.addEventListener('click', function () {
         signUpModal.style.display = 'none';
         overlay.classList.remove('open');
+        loginModal.style.display = 'none';
     });
 
     overlay.addEventListener('click', function () {
@@ -104,10 +106,12 @@
     var loginModal = document.querySelector('.login-container');
     var closeModal = document.querySelectorAll('.close-btn');
     var overlay = document.querySelector('.overlay');
+    var signUpModal = document.querySelector('.signup-container');
     for (var i = 0; i < closeModal.length; i++) {
         closeModal[i].addEventListener('click', function () {
             loginModal.style.display = 'none';
             overlay.classList.remove('open');
+            signUpModal.style.display = 'none';
         });
     }
     loginBtn.addEventListener('click', function (e) {
