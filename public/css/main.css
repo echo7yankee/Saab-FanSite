@@ -397,7 +397,8 @@ html {
 
 @media only screen and (max-width: 1325px) {
   .carousel {
-    max-width: 85%; } }
+    max-width: 85%;
+    min-height: 85rem; } }
 
 @media only screen and (max-width: 1180px) {
   .carousel {
