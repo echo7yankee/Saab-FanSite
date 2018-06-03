@@ -39,36 +39,31 @@
 //accordion scroll animation
 
 (function accordionScroll(){
-    var accordionOne = document.querySelector('.accordion-one');
-    var accordionOneTop = accordionOne.offsetTop;
-    var accordionTwo = document.querySelector('.accordion-two');
-    var accordionTwoTop = accordionTwo.offsetTop;
-    var accordionThree = document.querySelector('.accordion-three');
-    var accordionThreeTop = accordionThree.offsetTop;
-
     window.addEventListener('scroll', function(){
-        console.log(window.scrollY);
-        console.log(accordionOneTop);
+        var accordionOne = document.querySelector('.accordion-one');
+        var accordionOneTop = accordionOne.getBoundingClientRect().top;
+        var accordionTwo = document.querySelector('.accordion-two');
+        var accordionTwoTop = accordionTwo.getBoundingClientRect().top;
+        var accordionThree = document.querySelector('.accordion-three');
+        var accordionThreeTop = accordionThree.getBoundingClientRect().top
+        var screenPosition = window.innerHeight;
 
-        if (window.scrollY > accordionOneTop / 1.53) {
+        if (accordionOneTop < screenPosition / 1) {
             accordionOne.classList.add('active-one');
         } else {
-            //accordionOne.classList.remove('active-one');
+            accordionOne.classList.remove('active-one');
         }
-
-        if (window.scrollY >= accordionTwoTop / 1.48) {
+        if (accordionTwoTop < screenPosition / 1) {
             accordionTwo.classList.add('active-two');
         } else {
-            //accordionTwo.classList.remove('active-two');
+            accordionTwo.classList.remove('active-two');
         }
-
-        if (window.scrollY >= accordionThreeTop / 1.43) {
+        if (accordionThreeTop < screenPosition / 1) {
             accordionThree.classList.add('active-three');
         } else {
-            //accordionThree.classList.remove('active-three');
-        } 
-    })
-
+            accordionThree.classList.remove('active-three');
+        }
+    });
 }());
 
 //Signup Modal
