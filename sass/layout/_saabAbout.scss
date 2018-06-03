@@ -42,7 +42,7 @@
         box-shadow: 0 1rem 2rem rgba($color-black, .30);
     }
     &__content.active {
-        max-height: 25rem;
+        max-height: 30rem;
     }
     &__paragraph {
         font-size: 1.8rem;
@@ -53,6 +53,10 @@
         height: 6rem;
         width: 6rem;
     }
+}
+
+.about__content.disappear {
+    opacity: 0;
 }
 
 .accordion-one {
@@ -134,8 +138,8 @@
         }
 
         &__icon {
-            height: 4.5rem;
-            width: 4.5rem;
+            height: 4rem;
+            width: 4rem;
         }
     }
 }
@@ -153,10 +157,10 @@
         }
 
         &__icon {
-            height: 4rem;
-            width: 4rem;
-            margin-right: 1rem;
-            margin-left: 1rem;
+            height: 3.5rem;
+            width: 3.5rem;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
         }
     }
 }
