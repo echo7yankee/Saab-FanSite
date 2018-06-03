@@ -115,7 +115,7 @@
 @media only screen and (max-width: 1325px) { 
     .carousel {
         max-width: 85%;
-       min-height: 85rem;
+       min-height: 85vh;
     }
 }
 
@@ -128,7 +128,7 @@
 @media only screen and (max-width: 1024px) { 
 
     .carousel {
-        min-height: 83rem;
+        min-height: 53vh;
     }
 
 }
@@ -136,7 +136,7 @@
 @media only screen and (max-width: 1000px) { 
 
     .carousel {
-        min-height: 70rem;
+        min-height: 70vh;
     }
 
 }
@@ -146,7 +146,7 @@
         font-size: 2.5rem;
     }
     .carousel {
-        min-height: 65rem;
+        min-height: 65vh;
     }
 
     .fa-angle-left {
@@ -201,19 +201,19 @@
 
 @media only screen and (max-width: 414px) { 
     .carousel {
-        min-height: 37rem;
+        min-height: 37vh;
     }
 }
 
 @media only screen and (max-width: 412px) { 
     .carousel {
-        min-height: 33.5rem;
+        min-height: 33.5vh;
     }
 }
 
 @media only screen and (max-width: 375px) { 
     .carousel {
-        min-height: 30.5rem;
+        min-height: 30.5vh;
     }
 }
 

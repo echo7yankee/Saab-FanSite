@@ -46,19 +46,19 @@
         var accordionTwoTop = accordionTwo.getBoundingClientRect().top;
         var accordionThree = document.querySelector('.accordion-three');
         var accordionThreeTop = accordionThree.getBoundingClientRect().top
-        var screenPosition = window.innerHeight;
+        var windowHeight = window.innerHeight;
 
-        if (accordionOneTop < screenPosition / 1) {
+        if (accordionOneTop < windowHeight / 1) {
             accordionOne.classList.add('active-one');
         } else {
             accordionOne.classList.remove('active-one');
         }
-        if (accordionTwoTop < screenPosition / 1) {
+        if (accordionTwoTop < windowHeight / 1) {
             accordionTwo.classList.add('active-two');
         } else {
             accordionTwo.classList.remove('active-two');
         }
-        if (accordionThreeTop < screenPosition / 1) {
+        if (accordionThreeTop < windowHeight / 1) {
             accordionThree.classList.add('active-three');
         } else {
             accordionThree.classList.remove('active-three');
